@@ -4,6 +4,11 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: './src/index.js',
   mode: 'development',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index_bundle.js',
+    publicPath: '/'
+  },
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
@@ -30,6 +35,9 @@ module.exports = {
 					name: '[path][name].[ext]'
 				}
 			}]
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   devtool: "source-map",
   plugins: [

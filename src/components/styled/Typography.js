@@ -16,6 +16,8 @@ export const H5 = styled.h5`
 `;
 
 export const P = styled.p`
+  margin: 0 0 2em 0;
+  line-height: 28px;
 `;
 
 export const A = styled.a`

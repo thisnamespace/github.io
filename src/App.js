@@ -9,17 +9,19 @@ import routes from "./utils/routes";
 
 const Holder = styled.section`
   min-height: 100vh
-  max-width: 100vw;
+  max-width: 100vw;    
+  color: #5b5b5b;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-`;
-
-const Content = styled.section`
-  margin-bottom: 100px;
-  position: relative;
-  padding: 5rem;
-  :before {
+  font-size:  16px;
+  @import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap');
+  font-family: 'Roboto', sans-serif;
+  &:before {
     background: rgba(224, 224, 224, 0.75);
     content: '';
     height: 100%;
@@ -31,7 +33,13 @@ const Content = styled.section`
   }
 `;
 
+const Content = styled.section`
+  margin-bottom: 100px;
+  position: relative;
+`;
+
 function App() {
+  console.log(routes)
   return (
     <Holder>
       <Router>
